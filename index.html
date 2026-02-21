@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marathon Registration Payment</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+        background: linear-gradient(135deg, #ff6a88, #ff99ac);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        padding: 20px;
+    }
+
+    .container {
+        background: #ffffff;
+        width: 100%;
+        max-width: 420px;
+        border-radius: 15px;
+        padding: 30px 25px;
+        text-align: center;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+
+    h1 {
+        font-size: 22px;
+        margin-bottom: 10px;
+        color: #222;
+    }
+
+    p {
+        font-size: 14px;
+        color: #555;
+        margin-bottom: 20px;
+    }
+
+    .amount {
+        font-size: 24px;
+        font-weight: bold;
+        color: #e91e63;
+        margin-bottom: 20px;
+    }
+
+    .qr-section img {
+        width: 200px;
+        height: 200px;
+        object-fit: contain;
+        margin-bottom: 20px;
+        border: 5px solid #f3f3f3;
+        border-radius: 10px;
+    }
+
+    .btn {
+        display: block;
+        width: 100%;
+        padding: 12px;
+        margin: 10px 0;
+        text-decoration: none;
+        color: white;
+        border-radius: 8px;
+        font-weight: bold;
+        transition: 0.3s ease;
+    }
+
+    .gpay { background: #4285F4; }
+    .phonepe { background: #5f259f; }
+    .paytm { background: #00baf2; }
+
+    .btn:hover {
+        opacity: 0.85;
+    }
+
+    .note {
+        font-size: 12px;
+        color: #777;
+        margin-top: 15px;
+    }
+
+    @media (max-width: 480px) {
+        .container {
+            padding: 20px 15px;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Girls Marathon 2026</h1>
+    <p>ST JOSEPH'S INTERNATIONAL SCHOOL</p>
+
+    <div class="amount">Registration Fee: ₹299</div>
+
+    <div class="qr-section">
+        <!-- Replace with your actual QR image file -->
+        <img src="./PaymentQr.png" alt="Scan to Pay QR Code">
+    </div>
+
+    <!-- UPI Payment Links -->
+    <a class="btn gpay" 
+       href="upi://pay?pa=stjosephschoolvpa@indianbk&pn=Joseph%20International%20School&am=299&cu=INR">
+       Pay with Google Pay
+    </a>
+
+    <a class="btn phonepe" 
+       href="upi://pay?pa=stjosephschoolvpa@indianbk&pn=Joseph%20International%20School&am=299&cu=INR">
+       Pay with PhonePe
+    </a>
+
+    <a class="btn paytm" 
+       href="upi://pay?pa=stjosephschoolvpa@indianbk&pn=Joseph%20International%20School&am=299&cu=INR">
+       Pay with Paytm
+    </a>
+
+    <div class="note">
+        After payment, please enter your Transaction ID (UTR) in the registration form.
+    </div>
+
+</div>
+
+</body>
+</html>
